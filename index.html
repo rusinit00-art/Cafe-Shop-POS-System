@@ -130,4 +130,64 @@
             </div>
         </section>
 
+        <!--  BILLS -->
+        <section id="bills" class="spa-view" style="display:none">
+            <h4 class="mb-4 fw-bold">Sales History</h4>
+            <table class="table bg-white shadow-sm text-center">
+                <thead class="table-light">
+                <tr>
+                    <th>BILL ID</th>
+                    <th>DATE</th>
+                    <th>TOTAL</th>
+                </tr>
+                </thead>
+
+                <tbody id="bill-table-body"></tbody>
+            </table>
+        </section>
+
+        <!--SETTINGS -->
+        <section id="set" class="spa-view" style="display:none">
+            <h4 class="mb-4 fw-bold">Settings</h4>
+            <div class="card p-4 border-0 shadow-sm col-md-6 rounded-4 bg-white">
+                <input type="text" id="snm" class="form-control mb-2" placeholder="Shop Name">
+                <input type="text" id="onm" class="form-control mb-3" placeholder="Owner Name">
+                <button class="btn btn-coffee" id="btn-save-settings">Save Changes</button>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- uernmane pw section-->
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow" style="background: #fdfaf5;">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="authTitle">Staff Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <input type="text" id="auth-user" class="form-control mb-3" placeholder="Username">
+                <input type="password" id="auth-pass" class="form-control mb-3" placeholder="Password">
+                <button class="btn btn-coffee w-100 fw-bold py-2" onclick="processAuth()">GO</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="module" src="Controller/DashboardController.js"></script>
+<script type="module" src="Controller/CustomerController.js"></script>
+<script type="module" src="Controller/ItemController.js"></script>
+<script type="module" src="Controller/OrderController.js"></script>
+<script type="module" src="Controller/SettingController.js"></script>
+
+
+</body>
+</html>
+
 
