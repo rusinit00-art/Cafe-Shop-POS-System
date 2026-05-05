@@ -46,3 +46,26 @@
             </button>
         </div>
     </aside>
+
+    <!-- MAIN -->
+    <main id="content-area" class="flex-grow-1 p-4 overflow-auto" style="height: 100vh;">
+
+        <!--  DASHBOARD -->
+        <section id="dash" class="spa-view">
+            <!-- Login Signup -->
+            <div id="auth-cards-area" class="row mb-4 g-3">
+                <div class="col-md-6">
+                    <div class="card auth-card p-4 text-white border-0 shadow-sm">
+                        <h5>Welcome back!</h5>
+                        <p class="small opacity-75">Start your shift by logging in.</p>
+                        <button class="btn btn-warning btn-sm w-100 fw-bold" onclick="openAuth('login')">Login</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card auth-card p-4 text-white border-0 shadow-sm" style="background:#8b5e34">
+                        <h5>Staff Portal</h5>
+                        <p class="small opacity-75">New employee registration.</p>
+                        <button class="btn btn-light btn-sm w-100 fw-bold" onclick="openAuth('signup')">Sign Up</button>
+                    </div>
+                </div>
+            </div>
