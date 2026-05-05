@@ -1,33 +1,27 @@
 import { addCustomerData, updateCustomerData, deleteCustomerData, getCustomerData } from '../Model/CustomerModel.js';
-import { check_phone } from '../Utils/regex_util.js';
+import { validateName, validatePhone } from '../Utils/regex_util.js';
 
-const loadCustomerTbl = () => {
+const loadTable = () => {
     $('#ct').empty();
     getCustomerData().forEach((c, i) => {
-        $('#ct').append(`<tr onclick="loadCustForm(${i})" style="cursor:pointer">
-            <td>${c.name}</td><td>${c.phone}</td><td>${c.email || 'N/A'}</td><td>Edit</td>
-        </tr>`);
+        $('#ct').append(`<tr onclick="loadForm(${i})"><td>${c.name}</td><td>${c.phone}</td><td>${c.email || ''}</td></tr>`);
     });
 };
 
 window.saveC = () => {
     let name = $('#cn').val();
     let phone = $('#cp').val();
-    let email = $('#c-email').val();
+    if (!validateName(name)) return Swal.fire("Error", "Invalid Name", "error");
+    if (!validatePhone(phone)) return Swal.fire("Error", "Invalid Phone", "error");
 
-    if (!check_phone(phone)) return Swal.fire("Error", "Invalid Phone Number!", "error");
-
-    addCustomerData(name, phone, email);
-    loadCustomerTbl();
-    Swal.fire("Saved", "Customer Registered", "success");
+    addCustomerData(name, phone);
+    loadTable();
     $('#cn,#cp,#c-email').val('');
+    Swal.fire("Success", "Registered!", "success");
 };
 
-window.loadCustForm = (i) => {
-    let data = getCustomerData();
-    $('#cn').val(data[i].name);
-    $('#cp').val(data[i].phone);
-    $('#c-email').val(data[i].email);
+window.loadForm = (i) => {
+    let c = getCustomerData()[i];
+    $('#cn').val(c.name); $('#cp').val(c.phone);
 };
 
-$(document).ready(() => loadCustomerTbl());

@@ -6,8 +6,14 @@
 }
 
 body {
-    background: #f4f1ea;
+    background: #f3f0ec;
     font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#content-area {
+    background-color: #f4f1ea;
+    min-height: 100vh;
+    padding: 30px;
 }
 
 #sidebar {
@@ -15,6 +21,18 @@ body {
     background: var(--dark-brown);
     height: 100vh;
     border-radius: 0 30px 30px 0;
+}
+
+.sidebar-custom-logo {
+    width: 160px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+
+.sidebar-custom-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .nav-link, .nav-item {
@@ -35,14 +53,39 @@ body {
 .btn-coffee { background: var(--coffee-brown); color: white; border: none; }
 .btn-coffee:hover { background: var(--dark-brown); color: white; }
 
-.item-card {
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 20px;
-    background: white;
+.drinks-card img {
+    background-color: #ffffff;
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
 }
 .item-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
 .item-card img { height: 110px; object-fit: cover; border-radius: 15px; }
 
 .table { border-radius: 15px; overflow: hidden; }
+
+
+.billing-card {
+    background-color: #f4dcb5 ;
+    border: 1px solid #e9e0d2 ;
+}
+
+
+.billing-card h6 {
+    color: var(--dark-brown);
+}
+
+
+#cart-items-list {
+    background-color: #f5eedc;
+    border-radius: 15px;
+    padding: 15px;
+    min-height: 250px;
+}
+
+
+#cart-total {
+    color: var(--coffee-brown);
+}
+
