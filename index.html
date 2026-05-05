@@ -110,4 +110,24 @@
             </div>
         </section>
 
+        <!-- CUSTOMER -->
+        <section id="cust" class="spa-view" style="display:none">
+            <h4 class="mb-4 fw-bold">Customers</h4>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-3 bg-white rounded-4 border shadow-sm">
+                        <input type="text" id="cn" class="form-control mb-2" placeholder="Name">
+                        <input type="text" id="cp" class="form-control mb-2" placeholder="Phone">
+                        <input type="email" id="c-email" class="form-control mb-3" placeholder="Email">
+                        <button class="btn btn-coffee w-100 mb-2" id="btn-add-customer">Register</button>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary flex-grow-1 btn-sm" id="btn-update-customer">Update</button>
+                            <button class="btn btn-danger flex-grow-1 btn-sm" id="btn-delete-customer">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8"><table class="table bg-white shadow-sm"><thead><tr><th>Name</th><th>Phone</th><th>Email</th><th>Action</th></tr></thead><tbody id="ct"></tbody></table></div>
+            </div>
+        </section>
+
 
