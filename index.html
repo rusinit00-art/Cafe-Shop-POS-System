@@ -89,3 +89,25 @@
             </div>
         </section>
 
+        <!--  MENU ITEMS -->
+        <section id="items" class="spa-view" style="display:none;">
+            <h3 class="fw-bold mb-4">Manage Menu</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border">
+                        <input type="text" id="item-name" class="form-control mb-2" placeholder="Name">
+                        <input type="number" id="item-price" class="form-control mb-2" placeholder="Price">
+                        <input type="text" id="item-img" class="form-control mb-3" placeholder="Image URL">
+                        <button class="btn btn-coffee w-100 mb-3" id="btn-add-item">Add to Menu</button>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary flex-grow-1 btn-sm" id="btn-update-item">Update</button>
+                            <button class="btn btn-danger flex-grow-1 btn-sm" id="btn-delete-item">Delete</button>
+                            <button class="btn btn-secondary flex-grow-1 btn-sm" onclick="$('#item-name,#item-price,#item-img').val('')">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8"><table class="table bg-white"><thead><tr><th>IMG</th><th>NAME</th><th>PRICE</th><th>ACTION</th></tr></thead><tbody id="item-table-body"></tbody></table></div>
+            </div>
+        </section>
+
+
