@@ -2,17 +2,12 @@ import {customer_db} from '../db/db.js';
 
 class Customer {
     #name; #phone; #email;
-
     constructor(name, phone, email) {
-        this.#name = name;
-        this.#phone = phone;
-        this.#email = email;
+        this.#name = name; this.#phone = phone; this.#email = email;
     }
-
     get name() { return this.#name; }
     get phone() { return this.#phone; }
     get email() { return this.#email; }
-
     set name(name) { this.#name = name; }
     set phone(phone) { this.#phone = phone; }
     set email(email) { this.#email = email; }
@@ -22,9 +17,14 @@ export const addCustomerData = (name, phone, email) => {
     customer_db.push(new Customer(name, phone, email));
 }
 
-export const updateCustomerData = (name, phone, email) => {
+export const updateCustomerData = (phone, name, email) => {
     let obj = customer_db.find(c => c.phone == phone);
-    if(obj) { obj.name = name; obj.email = email; }
+    if(obj) {
+        obj.name = name;
+        obj.email = email;
+        return true;
+    }
+    return false;
 }
 
 export const deleteCustomerData = (phone) => {

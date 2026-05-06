@@ -24,12 +24,21 @@ export const addItemData = (name, price, url) => {
 
 export const updateItemData = (name, price, url) => {
     let obj = item_db.find(i => i.name == name);
-    if(obj) { obj.price = price; obj.url = url; }
+    if(obj) {
+        obj.price = price;
+        obj.url = url;
+        return true;
+    }
+    return false;
 }
 
 export const deleteItemData = (name) => {
     let index = item_db.findIndex(i => i.name == name);
-    if(index !== -1) item_db.splice(index, 1);
+    if(index !== -1) {
+        item_db.splice(index, 1);
+        return true;
+    }
+    return false;
 }
 
 export const getItemData = () => item_db;

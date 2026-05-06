@@ -6,8 +6,9 @@
 }
 
 body {
-    background: #f3f0ec;
+    background: #fdf6e3;
     font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
 
 #content-area {
@@ -84,8 +85,98 @@ body {
     min-height: 250px;
 }
 
-
 #cart-total {
     color: var(--coffee-brown);
 }
 
+#set {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#set::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2.5px);
+    z-index: -1;
+}
+
+.settings-card {
+    background-color: rgba(122, 78, 67, 0.58);
+    border-radius: 25px;
+    border: 1px solid rgba(14, 14, 14, 0.56);
+    z-index: 1;
+    width: 450px;
+}
+
+
+/*all background color*/
+#dash, #items, #cust, #bills {
+    background-color: #fff6df;
+    min-height: 100vh;
+}
+
+#dash, #items, #cust, #bills {
+    background-color:rgba(255, 255, 255, 0.03);
+}
+
+.card:not(.settings-card) {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+h4.fw-bold {
+    background: rgba(244, 241, 234, 0.8);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+#dash .row .col-md-6:first-child .card.auth-card {
+    background-color: var(--coffee-brown);
+    color: white;
+    backdrop-filter: none;
+}
+
+#dash .row .col-md-6:last-child .card.auth-card {
+    background-color: #8b5e34;
+    color: white;
+    backdrop-filter: none;
+}
+
+.auth-card h5, .auth-card p {
+    color: white;
+}
+
+#dash h4.fw-bold {
+    color: var(--dark-brown);
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+#content-area {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+#shop-name-display {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}

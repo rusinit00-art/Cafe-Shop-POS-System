@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <div class="main-wrapper d-flex">
     <!-- SIDEBAR -->
     <aside id="sidebar" class="p-4 d-flex flex-column text-white shadow">
@@ -48,7 +49,9 @@
     </aside>
 
     <!-- MAIN -->
-    <main id="content-area" class="flex-grow-1 p-4 overflow-auto" style="height: 100vh;">
+    <main id="content-area" class="flex-grow-1 p-4 overflow-auto"
+          style="height: 100vh;
+           background: linear-gradient(rgba(244, 241, 234, 0.5), rgba(244, 241, 234, 0.5)), url('assets/images/cafe.jpg') no-repeat center center/cover;">
 
         <!--  DASHBOARD -->
         <section id="dash" class="spa-view">
@@ -147,12 +150,22 @@
         </section>
 
         <!--SETTINGS -->
-        <section id="set" class="spa-view" style="display:none">
-            <h4 class="mb-4 fw-bold">Settings</h4>
-            <div class="card p-4 border-0 shadow-sm col-md-6 rounded-4 bg-white">
-                <input type="text" id="snm" class="form-control mb-2" placeholder="Shop Name">
-                <input type="text" id="onm" class="form-control mb-3" placeholder="Owner Name">
-                <button class="btn btn-coffee" id="btn-save-settings">Save Changes</button>
+        <section id="set" class="spa-view"
+                 style="display:none; background-image: url('assets/images/cafe.jpg');">
+
+            <div class="settings-card shadow-lg p-4">
+                <h4 class="fw-bold mb-4" style="color: var(--dark-brown);">System Settings</h4>
+                <div class="text-start">
+                    <label class="form-label small fw-bold">Cafe Name</label>
+                    <input type="text" id="snm" class="form-control mb-3" placeholder="Shop Name">
+
+                    <label class="form-label small fw-bold">Owner Name</label>
+                    <input type="text" id="onm" class="form-control mb-4" placeholder="Owner Name">
+
+                    <button class="btn btn-coffee w-100 fw-bold py-2" id="btn-save-settings">
+                        SAVE CHANGES
+                    </button>
+                </div>
             </div>
         </section>
     </main>
@@ -187,7 +200,7 @@
 <script type="module" src="Controller/SettingController.js"></script>
 
 
-</body>
+ </body>
 </html>
 
 
